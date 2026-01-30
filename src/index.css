@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-link-blue: #0066CC;
+
+  /* Body font - Manrope */
+  --font-family-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Display/Heading font - Pirata One */
+  --font-family-display: 'Pirata One', cursive;
+}
+
+/* Custom base styles */
+body {
+  background-color: white;
+  color: rgb(17 24 39); /* gray-900 */
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+/* Apply Pirata One to all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pirata One', cursive;
+}
+
+a {
+  color: var(--color-link-blue);
+  transition: all 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
