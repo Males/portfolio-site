@@ -3,6 +3,7 @@
  *
  * Displays an individual project card with number, title, description, and image
  * The entire card is clickable and opens the project in a new tab
+ * Responsive: adapts to grid layout
  */
 
 const ProjectCard = ({ project, number }) => {
@@ -11,20 +12,20 @@ const ProjectCard = ({ project, number }) => {
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block mb-12"
+      className="group block"
     >
       {/* Project number */}
-      <div className="text-2xl font-normal mb-4 text-white/60">
+      <div className="text-2xl lg:text-4xl font-normal mb-3 lg:mb-4 text-white/60">
         {String(number).padStart(2, '0')}
       </div>
 
       {/* Project title */}
-      <h4 className="text-xl font-normal mb-3 group-hover:text-[#F04847] transition-colors">
+      <h4 className="text-xl lg:text-2xl font-normal mb-2 lg:mb-3 group-hover:text-[#F04847] transition-colors">
         {project.title}
       </h4>
 
       {/* Project description */}
-      <p className="text-sm text-white/80 leading-relaxed mb-4">
+      <p className="text-sm lg:text-base text-white/80 leading-relaxed mb-4 lg:mb-6">
         {project.description}
       </p>
 

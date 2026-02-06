@@ -9,10 +9,10 @@ import { employmentHistory } from '../data/employment';
 
 const EmploymentHistory = () => {
   return (
-    <section className="w-full py-10 bg-[#161616]">
-      <div className="px-5">
+    <section className="w-full py-10 lg:py-20 bg-[#161616]">
+      <div className="px-5 lg:px-20 max-w-[1440px] mx-auto">
         {/* Section heading with red underline */}
-        <h3 className="text-2xl font-normal mb-6 lowercase relative inline-block">
+        <h3 className="text-2xl lg:text-5xl font-normal mb-6 lg:mb-12 lowercase relative inline-block">
           history
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F04847]"></span>
         </h3>
