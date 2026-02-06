@@ -15,17 +15,17 @@ const ProjectCard = ({ project, number }) => {
       className="group block"
     >
       {/* Project number */}
-      <div className="text-2xl lg:text-4xl font-normal mb-3 lg:mb-4 text-white/60">
+      <div className="text-2xl lg:text-5xl font-normal mb-4 lg:mb-6 text-white/60">
         {String(number).padStart(2, '0')}
       </div>
 
       {/* Project title */}
-      <h4 className="text-xl lg:text-2xl font-normal mb-2 lg:mb-3 group-hover:text-[#F04847] transition-colors">
+      <h4 className="text-xl lg:text-3xl font-normal mb-3 lg:mb-4 group-hover:text-[#F04847] transition-colors leading-tight">
         {project.title}
       </h4>
 
       {/* Project description */}
-      <p className="text-sm lg:text-base text-white/80 leading-relaxed mb-4 lg:mb-6">
+      <p className="text-sm lg:text-lg text-white/80 leading-relaxed mb-6 lg:mb-8">
         {project.description}
       </p>
 
