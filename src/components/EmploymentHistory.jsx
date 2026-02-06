@@ -9,48 +9,49 @@ import { employmentHistory } from '../data/employment';
 
 const EmploymentHistory = () => {
   return (
-    <section className="w-full py-6">
-      <div className="max-w-7xl px-10">
-        {/* Section heading */}
-        <h3 className="text-2xl md:text-3xl font-light mb-4">
-          History
+    <section className="w-full py-10 bg-[#161616]">
+      <div className="px-5">
+        {/* Section heading with red underline */}
+        <h3 className="text-2xl font-normal mb-6 lowercase relative inline-block">
+          history
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F04847]"></span>
         </h3>
 
         {/* Employment list */}
-        <ul className="space-y-4">
+        <ul className="space-y-3 mt-6">
           {employmentHistory.map((job, index) => (
-            <li key={index} className="flex items-center gap-3">
-              {/* Arrow indicator */}
-              <span className="text-gray-400" aria-hidden="true">
-                →
+            <li key={index} className="flex items-start gap-3">
+              {/* Checkmark indicator */}
+              <span className="text-white text-sm mt-0.5" aria-hidden="true">
+                ✓
               </span>
 
               {/* Job details */}
-              <div className={job.isItalic ? 'italic text-gray-600' : ''}>
+              <div className={job.isItalic ? 'italic text-white/60 text-sm' : 'text-sm'}>
                 {job.title && (
-                  <span className="font-medium">
+                  <span className="font-normal">
                     {job.title}
                   </span>
                 )}
                 {job.company && (
                   <>
-                    {' at '}
                     {job.url ? (
                       <a
                         href={job.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-link-blue hover:underline"
+                        className="hover:text-[#F04847]"
                       >
+                        {', '}
                         {job.company}
                       </a>
                     ) : (
-                      <span>{job.company}</span>
+                      <span>{', '}{job.company}</span>
                     )}
                   </>
                 )}
                 {job.years && (
-                  <span className="text-gray-600">
+                  <span className="text-white/60">
                     {', '}
                     {job.years}
                   </span>
